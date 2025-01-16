@@ -1,25 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Husnain's Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        h1 {
-            color: #4CAF50;
-            margin-top: 20%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warning Message</title>
+  <style>
+    /* Basic setup for body */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      height: 100vh; /* Ensure full viewport height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    /* Warning box styling */
+    .warning-box {
+      background-color: #ffcc00; /* Yellow color for warning */
+      color: black;
+      padding: 20px;
+      border: 2px solid #ff9900;
+      border-radius: 10px;
+      font-size: 18px;
+      text-align: center;
+      width: 300px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    }
+
+    .warning-box h2 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .warning-box p {
+      margin: 10px 0;
+    }
+  </style>
 </head>
 <body>
-    <h1>Welcome, Husnain!</h1>
-    <p>This is a simple HTML page with your name.</p>
+
+  <!-- Warning Box -->
+  <div class="warning-box">
+    <h2>Warning!</h2>
+    <p>This is a simple warning message.</p>
+  </div>
+
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Clickable Image with White Shadow</title>
+  <style>
+    /* Ensure no conflict with previous styles */
+    .animated-circle {
+      width: 200px; /* Set the size of the image */
+      height: 200px;
+      overflow: hidden;
+      border-radius: 50%; /* This makes the image have rounded corners (circle) */
+      display: inline-block;
+      position: relative;
+      animation: moveCircle 10s ease-in-out infinite; /* Slow movement animation */
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6); /* White shadow */
+    }
+
+    .animated-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures the image covers the entire container */
+      border-radius: 50%; /* Apply the same border-radius to the image */
+    }
+
+    .image-link {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Animation to move the container (and the image inside) from left to right and back */
+    @keyframes moveCircle {
+      0% {
+        transform: translateX(-100%); /* Start position off to the left */
+      }
+      50% {
+        transform: translateX(100%); /* Move position to the right */
+      }
+      100% {
+        transform: translateX(-100%); /* Move back to the left */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Create a clickable circular image with animation -->
+  <a href="https://example.com" target="_blank" class="image-link">
+    <div class="animated-circle">
+      <img src="https://i.ibb.co/Qc73RNk/IMG-20250115-WA0096.jpg" alt="Image">
+    </div>
+  </a>
+
+  <!-- Your other HTML content goes here -->
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Clickable Text</title>
+  <style>
+    /* Ensure no conflict with previous styles */
+    .animated-text {
+      font-size: 24px; /* Adjust the size of the text */
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      width: 200px; /* Set the size of the container */
+      height: 50px;
+      display: inline-block;
+      overflow: hidden;
+      border-radius: 25px; /* Rounded corners to match the circle style */
+      background-color: green; /* Green background color */
+      line-height: 50px; /* Vertically center the text */
+      animation: moveText 10s ease-in-out infinite; /* Slow movement animation */
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.8), 0 0 20px rgba(0, 255, 0, 0.6); /* Green shadow */
+    }
+
+    .animated-text a {
+      color: white;
+      text-decoration: none; /* Remove underline */
+    }
+
+    /* Animation to move the container (and the text inside) from left to right and back */
+    @keyframes moveText {
+      0% {
+        transform: translateX(-100%); /* Start position off to the left */
+      }
+      50% {
+        transform: translateX(100%); /* Move position to the right */
+      }
+      100% {
+        transform: translateX(-100%); /* Move back to the left */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Create a clickable animated text -->
+  <a href="https://example.com" target="_blank" class="animated-text">
+    WHATSAPP!
+  </a>
+
+  <!-- Your other HTML content goes here -->
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glowing Boxes with Image and Text</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: black;
+      margin: 0;
+      padding: 20px;
+      gap: 20px;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden; /* Prevent horizontal overflow during animations */
+    }
+
+    .box-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%; /* Full width of the page */
+      max-width: 100%; /* Ensures no max width is applied */
+      padding: 6px 10px;
+      background: #fff;
+      border-radius: 10%;
+      animation: rgbShadow 3s infinite, slideIn 0.5s ease-out forwards;
+      transition: box-shadow 0.5s ease-in-out;
+      opacity: 0; /* Make boxes invisible initially */
+      position: relative; /* To position the arrow inside the box */
+      margin-bottom: 20px; /* Space between boxes and arrows */
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+    }
+
+    .box:nth-child(1) {
+      animation-delay: 0.2s; /* Stagger animation for each box */
+    }
+
+    .box:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+
+    .box:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+
+    .box:nth-child(4) {
+      animation-delay: 0.8s;
+    }
+
+    .box:nth-child(5) {
+      animation-delay: 1s;
+    }
+
+    .image-container {
+      flex: 1;
+      max-width: 56px;
+      overflow: hidden;
+      border-radius: 0%;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .text-container {
+      flex: 3;
+      padding-left: 10px;
+      color: black;
+      font-size: 16px;
+    }
+
+    /* Arrow Bullet Style (opposite side) */
+    .box::before {
+      content: '←'; /* The arrow character, now pointing left */
+      font-size: 20px;
+      color: #fff;
+      position: absolute;
+      left: -25px; /* Place the arrow to the left of the box */
+      top: 50%;
+      transform: translateY(-50%); /* Vertically center the arrow */
+      opacity: 0; /* Initially hidden */
+      animation: slideArrow 0.5s ease-out forwards;
+    }
+
+    .box:nth-child(1)::before {
+      animation-delay: 0.2s; /* Stagger the arrow animation */
+    }
+
+    .box:nth-child(2)::before {
+      animation-delay: 0.4s;
+    }
+
+    .box:nth-child(3)::before {
+      animation-delay: 0.6s;
+    }
+
+    .box:nth-child(4)::before {
+      animation-delay: 0.8s;
+    }
+
+    .box:nth-child(5)::before {
+      animation-delay: 1s;
+    }
+
+    @keyframes rgbShadow {
+      0% { box-shadow: 10px 10px 15px rgba(255, 255, 255, 0.2), 0 0 20px rgb(255, 0, 0); }
+      25% { box-shadow: 10px -10px 15px rgba(255, 255, 255, 0.2), 0 0 20px rgb(0, 255, 0); }
+      50% { box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.2), 0 0 20px rgb(0, 0, 255); }
+      75% { box-shadow: -10px 10px 15px rgba(255, 255, 255, 0.2), 0 0 20px rgb(255, 255, 0); }
+      100% { box-shadow: 10px 10px 15px rgba(255, 255, 255, 0.2), 0 0 20px rgb(255, 0, 0); }
+    }
+
+    @keyframes slideIn {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideArrow {
+      0% {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="box-container">
+    <div class="box">
+      <a href="https://example.com/1" target="_blank" class="image-container">
+        <img src="https://via.placeholder.com/100" alt="Image 1">
+      </a>
+      <div class="text-container">
+        <p>This is the first box with glowing effects and an image.</p>
+      </div>
+    </div>
+
+    <div class="box">
+      <a href="https://example.com/2" target="_blank" class="image-container">
+        <img src="https://via.placeholder.com/100" alt="Image 2">
+      </a>
+      <div class="text-container">
+        <p>This is the second box with glowing effects and an image.</p>
+      </div>
+    </div>
+
+    <div class="box">
+      <a href="https://wa.me/923038776223/" target="_blank" class="image-container">
+        <img src="https://via.placeholder.com/100" alt="Image 3">
+      </a>
+      <div class="text-container">
+        <p>This is the third box with glowing effects and an image.</p>
+      </div>
+    </div>
+
+    <div class="box">
+      <a href="https://wa.me/923038776223/" target="_blank" class="image-container">
+        <img src="https://via.placeholder.com/100" alt="Image 4">
+      </a>
+      <div class="text-container">
+        <p>This is the fourth box with glowing effects and an image.</p>
+      </div>
+    </div>
+
+    <div class="box">
+      <a href="https://informstech7.blogspot.com" target="_blank" class="image-container">
+        <img src="https://via.placeholder.com/100" alt="Image 5">
+      </a>
+      <div class="text-container">
+        <p>This is the fifth box with glowing effects and an image.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
